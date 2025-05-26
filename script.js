@@ -1,5 +1,6 @@
 let tasks = [];
 
+// Add task
 function addTask() {
   const input = document.getElementById("taskInput");
   const taskText = input.value.trim();
@@ -15,6 +16,7 @@ function addTask() {
   }
 }
 
+// Render tasks
 function renderTaskList() {
   const list = document.getElementById("taskList");
   list.innerHTML = "";
@@ -29,12 +31,13 @@ function renderTaskList() {
   });
 }
 
+// Remove task
 function removeTask(index) {
   tasks.splice(index, 1);
   renderTaskList();
 }
 
-// Timer Logic
+// Timer logic
 let timer;
 let timeRemaining = 50 * 60;
 let isPaused = false;
@@ -66,7 +69,7 @@ function updateTimer() {
   }
 }
 
-// Date & Time Display
+// Date & Time
 function updateDateTime() {
   const now = new Date();
 
@@ -89,7 +92,7 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 
-// Set footer year dynamically
+// Footer year
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("footerYear");
   if (yearSpan) {
@@ -97,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Light and Dark Mode Functions
+// Theme switching
 function setDarkMode() {
   document.body.classList.add("dark-mode");
   document.body.classList.remove("light-mode");
