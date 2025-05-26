@@ -13,13 +13,11 @@ body {
 
 /* Mode Buttons */
 .mode-buttons {
-  position: fixed;
-  top: 20px;
-  right: 50%;
-  transform: translateX(50%);
   display: flex;
   gap: 10px;
-  z-index: 1000;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .mode-buttons button {
@@ -37,7 +35,7 @@ body {
   background-color: #805ad5;
 }
 
-/* Date Box (Top Left) */
+/* Date Display */
 .date-display {
   position: absolute;
   top: 20px;
@@ -57,7 +55,7 @@ body {
   line-height: 1.4;
 }
 
-/* Time Box (Top Right) */
+/* Time Display */
 .time-display {
   position: absolute;
   top: 20px;
@@ -75,11 +73,11 @@ body {
 .heading {
   font-size: 2.8rem;
   color: #663399;
-  margin: 80px 20px 20px;
+  margin: 20px 20px;
   text-align: center;
 }
 
-/* Main Layout Container */
+/* Main Container */
 .main-container {
   width: 95%;
   max-width: 1200px;
@@ -219,10 +217,7 @@ body.light-mode {
   color: #663399;
 }
 
-body.light-mode .content-container {
-  background-color: #ffffff;
-}
-
+body.light-mode .content-container,
 body.light-mode .timer-section,
 body.light-mode .task-section,
 body.light-mode .date-display,
@@ -261,11 +256,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
-body.dark-mode .content-container {
-  background-color: #2a2a3c;
-  color: #ffffff;
-}
-
+body.dark-mode .content-container,
 body.dark-mode .timer-section,
 body.dark-mode .task-section {
   background-color: #3c3c55;
@@ -304,7 +295,7 @@ body.dark-mode #taskList li {
   color: #ffffff;
 }
 
-/* Specific Elements to Force White Text in Dark Mode */
+/* Specific White Text in Dark Mode */
 body.dark-mode .heading,
 body.dark-mode .timer-section h2,
 body.dark-mode .task-section h2,
