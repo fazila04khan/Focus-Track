@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Track</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Mode Switch Buttons -->
+  <div class="mode-buttons">
+    <button onclick="setLightMode()">Light Mode</button>
+    <button onclick="setDarkMode()">Dark Mode</button>
+  </div>
+
+  <!-- Date (Top Left) -->
+  <div id="currentDate" class="date-display">
+    <div id="dateText"></div>
+    <div id="dayText"></div>
+  </div>
+
+  <!-- Time (Top Right) -->
+  <div id="currentTime" class="time-display"></div>
+
+  <!-- Heading -->
+  <h1 class="heading">Focus Track</h1>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="content-container">
+
+      <!-- Timer Section -->
+      <div class="timer-section">
+        <h2>Timer</h2>
+        <div id="timer">50:00</div>
+        <div class="timer-buttons">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+        </div>
+      </div>
+
+      <!-- Task Section -->
+      <div class="task-section">
+        <h2>Add Tasks</h2>
+        <div class="task-input-group">
+          <input type="text" id="taskInput" placeholder="Enter a task" />
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="taskList"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="footerYear"></span> Focus Track | Developed by Fazila | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
