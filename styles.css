@@ -81,7 +81,8 @@ body {
 .main-container {
   width: 95%;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 20px auto 60px auto;
+  flex: 1;
 }
 
 .content-container {
@@ -156,6 +157,11 @@ body {
   color: #663399;
 }
 
+.task-section input.error {
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
+}
+
 .task-section button {
   background-color: #9e7cff;
   color: #fff;
@@ -201,14 +207,12 @@ body {
 .footer {
   width: 100%;
   text-align: center;
-  padding: 20px 0;
+  padding: 2vh 0;
   background-color: #f5e6ff;
   color: #663399;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
   border-top: 2px solid #bfa6ff;
   margin-top: auto;
-  position: relative;
-  bottom: 0;
 }
 
 /* Light Mode */
@@ -302,4 +306,30 @@ body.dark-mode .task-section h2,
 body.dark-mode #timer,
 body.dark-mode .time-display {
   color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .date-display,
+  .time-display {
+    position: static;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .content-container {
+    padding: 20px;
+  }
+  
+  #timer {
+    font-size: 2.5rem;
+  }
+  
+  .task-input-group {
+    flex-direction: column;
+  }
 }
